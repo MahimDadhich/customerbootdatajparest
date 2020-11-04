@@ -44,7 +44,7 @@ public class CustomerController {
     @PutMapping("/update")
     public CustomerDetails update(@RequestBody @Valid UpdateCustomerRequest requestData) {
     	
-        Customer customer = new Customer(requestData.getFirstName(), requestData.getLastName(),requestData.getCustomerkey());
+        Customer customer = new Customer(requestData.getFirstName(),requestData.getLastName(),requestData.getCustomerKey());
         customer.setId(requestData.getId());
         customer = service.update(customer);
         CustomerDetails details = customerUtil.toDetails(customer);

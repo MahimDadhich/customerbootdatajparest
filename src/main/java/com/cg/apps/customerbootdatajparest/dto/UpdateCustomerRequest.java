@@ -13,7 +13,7 @@ public class UpdateCustomerRequest
     private String firstName;
 
     @Min(1) @Max(100)
-    private Integer customerkey;
+    private Integer customerKey;
 
     @NotBlank
     @NotBlank @Size(min =2, max = 20)
@@ -43,12 +43,12 @@ public class UpdateCustomerRequest
         this.id = id;
     }
 
-	public Integer getCustomerkey() {
-		return customerkey;
+	public Integer getCustomerKey() {
+		return customerKey;
 	}
 
-	public void setCustomerkey(Integer customerkey) {
-		this.customerkey = customerkey;
+	public void setCustomerKey(Integer customerKey) {
+		this.customerKey = customerKey;
 	}
 
     

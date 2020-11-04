@@ -58,7 +58,7 @@ public class CustomerServiceImpl implements CustomerService
 		boolean exists=customer.getId()!=null && customerRepo.existsById(customer.getId());
         if(!exists) 
         {
-            System.out.println("Customer doesn't exists for id="+customer.getId()+" so can't be updated.");
+            throw new CustomerNotFoundException("Customer not found for id="+customer.getId()+" can't be updated");
         }
         customer = customerRepo.save(customer);
         return customer;
